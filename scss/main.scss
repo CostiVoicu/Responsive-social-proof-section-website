@@ -1,0 +1,259 @@
+@import './variabels';
+@import './style';
+html, body{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+}
+
+body{
+    background-color: $white;
+    font-size: $font-size;
+    font-family: $font-family;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right bottom;
+    background-attachment: scroll, scroll;
+    background-size: 100% auto, 100% auto;
+    
+    @media(min-width: $desktop-size){
+        margin-bottom: 6.7rem;
+        background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+        background-size: 40% auto, 70% auto;
+        @include center_flex(column);
+        overflow: hidden;
+    }
+
+    .main{
+        padding: 1em;
+        display: block;
+        @include center_flex(column);
+        @media (min-width: $desktop-size){
+            position: relative;
+            width: 100%;
+            height: 80vh;
+        }
+        .up{
+            @include dim(100%);
+            @include center_flex(column);
+            @media (min-width: $desktop-size){
+                @include center_flex(row);
+                position: absolute;
+                top: 1vh;
+                left: -8vh;
+            }
+            .left{
+                @include dim(100%);
+                @include center_flex(column);
+                @media (min-width: $desktop-size){
+                    position: relative;
+                    left: 2em;
+                    width: 100vh;
+                    height: auto;
+                    display: block;
+                }
+                .header{
+                    @include dim(100%);
+                    @include center_flex(row);
+                    @include text_center;
+                    @media (min-width: $desktop-size){
+                        @include center_flex(column);
+                        text-align: left;
+                        width: 100vh;
+                        height: 180px;
+                    }
+                    &__title{
+                        color: $very-dark-magenta;
+                        font-weight: $big-weight;
+                        max-width: 20rem;
+                        font-size: 30px;
+                        @media (min-width: $desktop-size){
+                            font-size: 45px;
+                            max-width: 25rem;
+                            padding-top: 0.6em;
+                        }
+                    }
+                }
+                .article{
+                    @include dim(100%);
+                    @include center_flex(row);
+                    @include text_center;
+                    padding-bottom: 1.5em;
+                    @media (min-width: $desktop-size){
+                        @include center_flex(column);
+                        text-align: left;
+                    }
+                    &__text{
+                        color: $dark-grayish-magenta;
+                        font-weight: $medium-weight;
+                        font-size: $font-size;
+                        max-width: 21.5rem;
+                        line-height: 1.5em;
+                        @media (min-width: $desktop-size){
+                            max-width: 30rem;
+                            padding-left: 5em;
+                        }
+                    }
+                }
+            }
+            .right{
+                @include dim(100%);
+                @include center_flex(column);
+                padding-bottom: 2em;
+                @media (min-width: $desktop-size){
+                    position: relative;
+                    width: 100vh;
+                    height: auto;
+                    display: block;
+                }
+                .small_card{
+                    @include dim(90%);
+                    @include center_flex(column);
+                    background-color: $light-grayish-magenta;
+                    padding: 1em;
+                    border-radius: 0.6em;
+                    max-width: 360px;
+                    @media (min-width: $desktop-size){
+                        @include center_flex(row);
+                        position: relative;
+                        max-width: 10000px;
+                        width: 450px;
+                        height: 25px;
+                    }
+                    .stars{
+                        padding-bottom: 0.8em;
+                        @media (min-width: $desktop-size){
+                            padding-right: 1em;
+                            position: absolute;
+                            left: 2em;
+                            top: 1.3em;
+                        }
+                        img{
+                            @media (min-width: $desktop-size){
+                                padding-right: 0.2em;
+                            }
+                        }
+                    }
+                    &__text{
+                        color: $very-dark-magenta;
+                        font-size: $font-size;
+                        font-weight: $big-weight;
+                        @media (min-width: $desktop-size){
+                            position: absolute;
+                            top: 1.3em;
+                            left: 12em;
+                        }
+                    }
+                }
+                .small_card1{
+                    @media (min-width: $desktop-size){
+                        position: absolute;
+                        top: -6em;
+                        left: 4em;
+                    }
+                }
+                .small_card2{
+                    @media (min-width: $desktop-size){
+                        position: absolute;
+                        top: -1em;
+                        left: 8em;
+                    }
+                }   
+                .small_card3{
+                    @media (min-width: $desktop-size){
+                        position: absolute;
+                        top: 4em;
+                        left: 12em;
+                    }
+                }
+            }
+        }
+        .down{
+            @include dim(100%);
+            @include center_flex(column);
+            @media (min-width: $desktop-size){
+                @include center_flex(row);
+                position: absolute;
+                top: 40vh;
+                left: -5vh;
+            }
+            .big_cards{
+                @include dim(100%);
+                @include center_flex(column);
+                @media (min-width: $desktop-size){
+                    position: relative;
+                    width: 100vh;
+                    height: auto;
+                    display: block;
+                }
+                .big_card{
+                    @include dim(80%);
+                    height: 200px;
+                    @include center_flex(column);
+                    background-color: $very-dark-magenta;
+                    padding: 2em;
+                    border-radius: 0.6em;
+                    max-width: 330px;
+                    display: block;
+                    .profile_info{
+                        @include center_flex(row);
+                        float: left;
+                        .profile_image{
+                            border-radius: 50%;
+                            width: 43px;
+                            height: auto;
+                        }
+                        .name_info{
+                            @include center_flex(column);
+                            padding-left: 1.5em;
+                            .name{
+                                color: $light-grayish-magenta;
+                                font-weight: $big-weight;
+                                font-size: $font-size;
+                            }
+                            .info{
+                                color: $soft-pink;
+                                font-weight: $small-weight;
+                                font-size: $font-size;
+                                opacity: 70%;
+                            }
+                        }
+                    }
+                    &__text{
+                        float: right;
+                        color: $light-grayish-magenta;
+                        font-size: $font-size;
+                        font-weight: $medium-weight;
+                        line-height: 1.5em;
+                        padding-top: 1em;
+                    }
+                    
+                }
+                .big_card1{
+                    @media (min-width: $desktop-size){
+                        position: absolute;
+                        left: -9em;
+                        top: 1em;
+                    }
+                }
+                .big_card2{
+                    @media (min-width: $desktop-size){  
+                        position: absolute;
+                        left: 19em;
+                        top: 2.2em;
+                    }
+                }
+                .big_card3{
+                    @media (min-width: $desktop-size){
+                        position: absolute;
+                        left: 47em;
+                        top: 3.4em;
+                    }
+                }
+            }
+            
+        }
+    }
+}

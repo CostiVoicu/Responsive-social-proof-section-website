@@ -1,0 +1,15 @@
+@mixin center_flex ($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin dim ($width){
+    width: $width;
+    height: auto;
+}
+
+@mixin text_center{
+    text-align: center;
+}
