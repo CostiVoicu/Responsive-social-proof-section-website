@@ -38,11 +38,10 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- Sass variables
 - Flexbox
 - Mobile-first workflow
 - Background images
-- Sass (scss syntax)
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
