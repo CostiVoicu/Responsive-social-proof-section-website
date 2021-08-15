@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/desktop ss.png)
+![](./images/desktop-ss.png)
 
 ### Links
 
@@ -42,7 +42,7 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - Background images
-- Sass, scss syntax
+- Sass (scss syntax)
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
@@ -83,11 +83,17 @@ $medium-weight: 500;
 $big-weight: 700;
 ```
 
-- How to imposrt files in sass
+- How to import files in sass
 
 ```scss
 @import './variabels';
 @import './style';
+```
+
+- How to include mixins
+
+```scss
+@include center_flex(column);
 ```
 
 ### Continued development
