@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution](https://your-solution-url.com)
+- Solution URL: [solution](https://www.frontendmentor.io/solutions/responsivesocialproofsectionwebsite-9aCpImOxX)
 - Live Site URL: [live site](https://costivoicu.github.io/Responsive-social-proof-section-website/)
 
 ## My process
@@ -98,8 +98,8 @@ $big-weight: 700;
 
 ### Continued development
 
-- Centering the content
-- Alining the content
+- Centering the whole content
+- Alining the article and the title to the big cards
 
 ### Useful resources
 
